@@ -37,3 +37,4 @@ class TestRegistration:
         error = driver.find_element(*REG_ERROR_MESSAGE)
         assert error.is_displayed()
         assert "Некорректный пароль" in error.text
+        

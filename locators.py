@@ -4,13 +4,15 @@ from selenium.webdriver.common.by import By
 MAIN_LOGIN_BUTTON = (By.XPATH, "//button[text()='Войти в аккаунт']")
 # Ссылка «Личный Кабинет» в хедере
 MAIN_PROFILE_LINK = (By.XPATH, "//p[text()='Личный Кабинет']")
+# Кнопка "Оформить заказ" на главной странице
+BASKET_BUTTON = (By.XPATH, "//button[text()='Оформить заказ']")
 # Логотип Stellar Burgers (ссылка на главную страницу)
 MAIN_CONSTRUCTOR_LOGO = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']//a[@href='/']")
 
 # Поле ввода имени на форме регистрации
-REG_NAME_INPUT = (By.XPATH, "//fieldset[1]//input[@name='name']")
+REG_NAME_INPUT = (By.XPATH, "//label[text()='Имя']/following-sibling::input[@name='name']")
 # Поле ввода email на форме регистрации
-REG_EMAIL_INPUT = (By.XPATH, "//fieldset[2]//input[@name='name']")
+REG_EMAIL_INPUT = (By.XPATH, "//label[text()='Email']/following-sibling::input[@name='name']")
 # Поле ввода пароля на форме регистрации
 REG_PASSWORD_INPUT = (By.XPATH, "//input[@name='Пароль']")
 # Кнопка «Зарегистрироваться» на форме регистрации
@@ -21,7 +23,7 @@ REG_LOGIN_LINK = (By.XPATH, "//a[text()='Войти']")
 REG_ERROR_MESSAGE = (By.XPATH, "//p[contains(text(), 'Некорректный пароль')]")
 
 # Поле ввода email на форме входа
-LOGIN_EMAIL_INPUT = (By.XPATH, "//fieldset[1]//input[@name='name']")
+LOGIN_EMAIL_INPUT = (By.XPATH, "//label[text()='Email']/following-sibling::input[@name='name']")
 # Поле ввода пароля на форме входа
 LOGIN_PASSWORD_INPUT = (By.XPATH, "//input[@name='Пароль']")
 # Кнопка «Войти» на форме входа
@@ -36,7 +38,18 @@ PROFILE_CONSTRUCTOR_LINK = (By.XPATH, "//a[@href='/']//p[text()='Констру�
 
 # Вкладка «Булки» в конструкторе
 CONSTRUCTOR_BUNS_TAB = (By.XPATH, "//span[text()='Булки']")
+
+# Активная вкладка «Булки» в конструкторе
+CONSTRUCTOR_BUNS_CURRENT = (By.XPATH, "//span[text()='Булки']/parent::div[contains(@class, 'tab_tab_type_current__2BEPc')]")
+
 # Вкладка «Соусы» в конструкторе
 CONSTRUCTOR_SAUCES_TAB = (By.XPATH, "//span[text()='Соусы']")
+
+# Активная вкладка «Соусы» в конструкторе
+CONSTRUCTOR_SAUCES_CURRENT= (By.XPATH, "//span[text()='Соусы']/parent::div[contains(@class, 'tab_tab_type_current__2BEPc')]")
+
 # Вкладка «Начинки» в конструкторе
 CONSTRUCTOR_FILLINGS_TAB = (By.XPATH, "//span[text()='Начинки']")
+
+# Активная вкладка «Начинки» в конструкторе
+CONSTRUCTOR_FILLINGS_CURRENT = (By.XPATH, "//span[text()='Начинки']/parent::div[contains(@class, 'tab_tab_type_current__2BEPc')]")
