@@ -23,7 +23,7 @@ class TestProfileNavigation:
         )
         driver.find_element(*MAIN_CONSTRUCTOR_LOGO).click()
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//h2[text()='Булки']"))
+            EC.presence_of_element_located(CONSTRUCTOR_BUNS)
         )
         assert driver.current_url == "https://stellarburgers.education-services.ru/"
 
@@ -35,7 +35,7 @@ class TestProfileNavigation:
         )
         driver.find_element(*PROFILE_CONSTRUCTOR_LINK).click()
         WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.XPATH, "//h2[text()='Булки']"))
+            EC.presence_of_element_located(CONSTRUCTOR_BUNS)
         )
         assert driver.current_url == "https://stellarburgers.education-services.ru/"
 
@@ -49,4 +49,4 @@ class TestProfileNavigation:
         WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable(LOGIN_SUBMIT_BUTTON)
         )
-        assert "Войти" in driver.page_source
+       

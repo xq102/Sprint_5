@@ -30,11 +30,16 @@ LOGIN_PASSWORD_INPUT = (By.XPATH, "//input[@name='Пароль']")
 LOGIN_SUBMIT_BUTTON = (By.XPATH, "//button[text()='Войти']")
 # Ссылка «Восстановить пароль» на форме входа
 LOGIN_RESTORE_LINK = (By.XPATH, "//a[text()='Восстановить пароль']")
+# Ссылка «Зарегистрироваться» на странице входа
+LOGIN_REG_LINK = (By.XPATH, "//a[text()='Зарегистрироваться']")
 
 # Кнопка «Выход» в личном кабинете
 PROFILE_LOGOUT_BUTTON = (By.XPATH, "//button[text()='Выход']")
 # Ссылка «Конструктор» в личном кабинете
 PROFILE_CONSTRUCTOR_LINK = (By.XPATH, "//a[@href='/']//p[text()='Конструктор']")
+
+# Заголовок «Булки» в конструкторе
+CONSTRUCTOR_BUNS = (By.XPATH, "//h2[text()='Булки']")
 
 # Вкладка «Булки» в конструкторе
 CONSTRUCTOR_BUNS_TAB = (By.XPATH, "//span[text()='Булки']")

@@ -7,7 +7,7 @@ from generators import generate_email, generate_password
 def register_user(driver):
     driver.get("https://stellarburgers.education-services.ru/")
     driver.find_element(*MAIN_LOGIN_BUTTON).click()
-    driver.find_element(By.XPATH, "//a[text()='Зарегистрироваться']").click()
+    driver.find_element(*LOGIN_REG_LINK).click()
 
     email = generate_email()
     password = generate_password()
@@ -26,7 +26,7 @@ def login_user(driver):
         EC.element_to_be_clickable(MAIN_LOGIN_BUTTON)
     )
     driver.find_element(*MAIN_LOGIN_BUTTON).click()
-    driver.find_element(By.XPATH, "//a[text()='Зарегистрироваться']").click()
+    driver.find_element(*LOGIN_REG_LINK).click()
 
     email = generate_email()
     password = generate_password()
@@ -45,4 +45,3 @@ def login_user(driver):
     WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable(MAIN_PROFILE_LINK)
     )
-    

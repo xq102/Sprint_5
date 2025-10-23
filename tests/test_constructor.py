@@ -11,7 +11,8 @@ class TestConstructor:
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(CONSTRUCTOR_SAUCES_CURRENT)
         )
-        assert driver.find_element(*CONSTRUCTOR_SAUCES_CURRENT)
+        sauces_current_element = driver.find_element(*CONSTRUCTOR_SAUCES_CURRENT)
+        assert sauces_current_element.is_displayed()
 
     def test_switch_to_fillings_section(self, driver):
         driver.get("https://stellarburgers.education-services.ru/")
@@ -19,7 +20,8 @@ class TestConstructor:
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(CONSTRUCTOR_FILLINGS_CURRENT)
         )  
-        assert driver.find_element(*CONSTRUCTOR_FILLINGS_CURRENT)
+        fillings_current_element = driver.find_element(*CONSTRUCTOR_FILLINGS_CURRENT)
+        assert fillings_current_element.is_displayed()
 
     def test_switch_to_buns_section(self, driver):
         driver.get("https://stellarburgers.education-services.ru/")
@@ -28,5 +30,6 @@ class TestConstructor:
         WebDriverWait(driver, 10).until(
             EC.presence_of_element_located(CONSTRUCTOR_BUNS_CURRENT)
         )  
-        assert driver.find_element(*CONSTRUCTOR_BUNS_CURRENT)
+        buns_current_element = driver.find_element(*CONSTRUCTOR_BUNS_CURRENT)
+        assert buns_current_element.is_displayed()
          
